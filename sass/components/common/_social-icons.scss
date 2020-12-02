@@ -1,0 +1,32 @@
+.social-icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-icons-svg {
+  height: 20px;
+  width: 20px;
+  fill: $svg-icons;
+  transition: fill 250ms $timing-function;
+}
+
+.social-icons-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+
+  transition: 250ms $timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: $accentColor;
+
+    & .social-icons-svg,
+    & .social-icons-svg {
+      fill: $whiteColor;
+    }
+  }
+}

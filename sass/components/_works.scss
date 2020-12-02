@@ -1,0 +1,45 @@
+.works-section {
+  padding-top: 0px;
+}
+
+.works {
+  &__title {
+    text-align: center;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__thumb {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $whiteColor;
+  }
+
+  &__list {
+    @extend %list;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    &:nth-child(3n + 1) {
+      margin-left: 0;
+    }
+  }
+  &__item {
+    position: relative;
+    margin-left: 30px;
+    flex-basis: calc(100% / 3 - 30px);
+  }
+  &__overlay {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 370px;
+    height: 70px;
+    background: rgba(47, 48, 58, 0.8);
+  }
+}

@@ -1,0 +1,60 @@
+.features {
+  .list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .title {
+    display: block;
+
+    margin-bottom: 10px;
+
+    min-width: 270px;
+    min-height: 16px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+  }
+
+  @include generateIcons($iconList);
+
+  &__skill {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+  }
+
+  &__item {
+    width: calc((100% - 90px) / 4);
+
+    &::before {
+      display: block;
+      content: "";
+
+      margin-bottom: 30px;
+
+      height: 120px;
+      border-radius: 4px;
+
+      background-color: $third-bgc;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
+
+// .features__list .features__item::before {
+//   display: block;
+//   content: "";
+
+//   margin-bottom: 30px;
+
+//   height: 120px;
+//   border-radius: 4px;
+
+//   background-color: $third-bgc;
+//   background-repeat: no-repeat;
+//   background-position: center;
+// }

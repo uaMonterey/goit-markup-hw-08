@@ -1,0 +1,24 @@
+@mixin centeredFlex($dsp: flex, $ai: center, $jc: center) {
+  display: $dsp;
+  align-items: $ai;
+  justify-content: $jc;
+}
+
+@mixin fonts($fs, $fw, $lh, $ls: 0.03em) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+
+@mixin bordered($color: black, $type: solid) {
+  border: 1px $type $color;
+}
+
+@mixin generateIcons($iconList) {
+  @each $iconName in $iconList {
+    .icon-#{$iconName}::before {
+      background-image: url(../img-hw-4/#{$iconName}.svg);
+    }
+  }
+}

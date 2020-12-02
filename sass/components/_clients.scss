@@ -1,0 +1,49 @@
+.clients {
+  &__title {
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 90px;
+    border: 1px solid $svg-icons;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    transition: 250ms $timing-function;
+
+    &:hover,
+    &:focus {
+      border: 1px solid $accentColor;
+
+      //  первий вариант
+      & .clients__icon,
+      & .clients__icon {
+        fill: $accentColor;
+      }
+    }
+    //    второй вариант
+    // &:hover .clients__icon,
+    // &:focus .clients__icon {
+    //   fill: $accentColor;
+    // }
+  }
+
+  &__icon {
+    fill: $svg-icons;
+    transition: fill 250ms $timing-function;
+  }
+}
+//        третий вариант
+// .clients__link:hover .clients__icon,
+// .clients__link:focus .clients__icon {
+//   fill: $accentColor;
+// }
