@@ -1,18 +1,37 @@
 .clients {
+  margin-bottom: 60px;
+
   &__title {
+    padding-top: 53px;
+
+    margin-bottom: 0;
+
+    font-size: 28px;
+    line-height: 1.17;
+
     text-align: center;
   }
 
   &__list {
+    // display: flex;
+    // justify-content: space-between;
+
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  &__item {
+    margin-top: 30px;
   }
 
   &__link {
     display: inline-flex;
+
     justify-content: center;
     align-items: center;
-    width: 170px;
+    // width: 170px;
+    width: 210px;
     height: 90px;
     border: 1px solid $svg-icons;
     box-sizing: border-box;

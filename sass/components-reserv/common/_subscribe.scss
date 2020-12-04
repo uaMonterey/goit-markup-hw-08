@@ -1,0 +1,78 @@
+.subscribe {
+  margin-left: auto;
+
+  .title {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: $whiteColor;
+  }
+
+  &__form {
+    display: flex;
+  }
+
+  &__input {
+    display: block;
+    width: 358px;
+    height: 50px;
+    margin-right: 12px;
+    padding: 16px 15px;
+    background: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    color: $accentColor;
+
+    &:focus,
+    &:hover {
+      outline-color: $accentColor;
+      color: $whiteColor;
+    }
+  }
+}
+
+.btn-send {
+  display: flex;
+  align-items: center;
+
+  padding-left: 29px;
+  padding-right: 28px;
+
+  background: $accentColor;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: transparent;
+  border-radius: 4px;
+  transition: 250ms $timing-function;
+  color: $whiteColor;
+
+  &__title {
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+  }
+
+  &__svg {
+    width: 24px;
+    height: 24px;
+    fill: $whiteColor;
+    transition: 250ms $timing-function;
+
+    &:hover,
+    &:focus {
+      background: $whiteColor;
+      color: $secondaryTextColor;
+    }
+  }
+
+  &:hover .btn-send__svg {
+    fill: $accentColor;
+  }
+}

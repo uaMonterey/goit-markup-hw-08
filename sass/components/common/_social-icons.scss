@@ -1,6 +1,11 @@
 .social-icons {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  // justify-content: space-between;
+}
+
+.social-icons-item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .social-icons-svg {

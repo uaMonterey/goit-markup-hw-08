@@ -32,6 +32,10 @@ b {
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    padding: 0;
+  }
 }
 
 .list {
@@ -63,6 +67,20 @@ b {
   padding-right: 15px;
   margin-right: auto;
   margin-left: auto;
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 768px;
+    background-color: orangered;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+    background-color: aquamarine;
+  }
 
   // outline: 2px solid tomato;
 }

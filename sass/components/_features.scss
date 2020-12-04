@@ -1,11 +1,15 @@
 .features {
+  margin-bottom: 60px;
+
   .list {
-    display: flex;
-    justify-content: space-between;
+    //   display: flex;
+    //   justify-content: space-between;
   }
 
   .title {
-    display: block;
+    // display: block;
+    display: flex;
+    justify-content: center;
 
     margin-bottom: 10px;
 
@@ -24,10 +28,12 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
+
+    margin-bottom: 30px;
   }
 
   &__item {
-    width: calc((100% - 90px) / 4);
+    // width: calc((100% - 90px) / 4);
 
     &::before {
       display: block;
