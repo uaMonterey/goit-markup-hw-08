@@ -1,7 +1,25 @@
+.icons-list {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons-link {
+  background: rgba(255, 255, 255, 0.1);
+  // margin-right: 10px;
+}
+.social-icons-svg {
+  fill: $whiteColor;
+}
+
+.social-icons-link:hover,
+.social-icons-link:focus {
+  background: $accentColor;
+}
+
 .social-icons {
   display: flex;
   justify-content: center;
-  // justify-content: space-between;
 }
 
 .social-icons-item:not(:last-child) {

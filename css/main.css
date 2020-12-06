@@ -774,6 +774,25 @@ b {
   padding: 30px 32px;
 }
 
+.icons-list {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons-link {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.social-icons-svg {
+  fill: #ffffff;
+}
+
+.social-icons-link:hover,
+.social-icons-link:focus {
+  background: #2196f3;
+}
+
 .social-icons {
   display: flex;
   justify-content: center;
@@ -800,7 +819,8 @@ b {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-icons-link:hover, .social-icons-link:focus {
+.social-icons-link:hover,
+.social-icons-link:focus {
   background-color: #2196f3;
 }
 
@@ -890,13 +910,13 @@ b {
     display: flex;
     justify-content: space-around;
     text-align: center;
-    margin-bottom: 60px;
   }
 }
 
 @media (min-width: 1200px) {
   .footer .container {
     display: flex;
+    justify-content: space-between;
     align-items: baseline;
   }
 }
@@ -949,7 +969,6 @@ b {
 .social-network {
   display: flex;
   flex-direction: column;
-  text-align: center;
   padding-top: 12px;
   margin-left: 70px;
 }
@@ -959,7 +978,6 @@ b {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 60px;
     padding-top: 0;
   }
 }
@@ -974,29 +992,21 @@ b {
   color: #ffffff;
 }
 
-.social-network .icons-list {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.social-network .social-icons-link {
-  background: rgba(255, 255, 255, 0.1);
-  margin-right: 10px;
-}
-
-.social-network .social-icons-svg {
-  fill: #ffffff;
-}
-
-.social-network .social-icons-link:hover,
-.social-network .social-icons-link:focus {
-  background: #2196f3;
+@media (min-width: 1200px) {
+  .social-network .title {
+    margin-left: 0;
+  }
 }
 
 .subscribe {
   margin-left: auto;
   text-align: center;
+}
+
+@media screen and (max-width: 1199px) {
+  .subscribe {
+    margin-top: 60px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -1095,8 +1105,6 @@ b {
 }
 
 .btn-send__svg {
-  width: 32px;
-  height: 32px;
   fill: #ffffff;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }

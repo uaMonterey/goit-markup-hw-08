@@ -13,13 +13,14 @@
       display: flex;
       justify-content: space-around;
       text-align: center;
-      margin-bottom: 60px;
+      // margin-bottom: 60px;
     }
   }
 
   .container {
     @include for-size(desktop) {
       display: flex;
+      justify-content: space-between;
       align-items: baseline;
     }
   }
@@ -70,13 +71,13 @@
 .social-network {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  // text-align: center;
 
   @media screen and (max-width: 767px) {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 60px;
+    // margin-bottom: 60px;
     padding-top: 0;
   }
 
@@ -93,24 +94,9 @@
     text-transform: uppercase;
 
     color: $whiteColor;
-  }
 
-  .icons-list {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .social-icons-link {
-    background: rgba(255, 255, 255, 0.1);
-    margin-right: 10px;
-  }
-  .social-icons-svg {
-    fill: $whiteColor;
-  }
-
-  .social-icons-link:hover,
-  .social-icons-link:focus {
-    background: $accentColor;
+    @include for-size(desktop) {
+      margin-left: 0;
+    }
   }
 }

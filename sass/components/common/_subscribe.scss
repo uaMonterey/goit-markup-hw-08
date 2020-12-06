@@ -2,6 +2,10 @@
   margin-left: auto;
   text-align: center;
 
+  @media screen and (max-width: 1199px) {
+    margin-top: 60px;
+  }
+
   @include for-size(desktop) {
     text-align: start;
   }
@@ -90,8 +94,6 @@
   }
 
   &__svg {
-    width: 32px;
-    height: 32px;
     fill: $whiteColor;
     transition: 250ms $timing-function;
 
