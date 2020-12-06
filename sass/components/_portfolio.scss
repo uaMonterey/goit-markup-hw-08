@@ -53,16 +53,30 @@
   }
 
   .cards-set {
-    display: flex;
-    flex-wrap: wrap;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
 
-    margin-left: -30px;
-    margin-top: -30px;
+      margin-left: -30px;
+      margin-top: -30px;
+    }
 
     .item {
-      margin-left: 30px;
-      margin-top: 30px;
-      flex-basis: calc(100% / 3 - 30px);
+      margin-bottom: 30px;
+
+      @include for-size(tablet) {
+        margin-left: 30px;
+        margin-top: 30px;
+        flex-basis: calc(100% / 2 - 30px);
+      }
+
+      @include for-size(desktop) {
+        margin-left: 30px;
+        margin-top: 30px;
+        flex-basis: calc(100% / 3 - 30px);
+      }
+
+      // outline: 1px solid tomato;
 
       text-decoration: none;
       transition: box-shadow 250ms $timing-function;
@@ -81,6 +95,10 @@
     }
 
     .product {
+      @include for-size(mobile-only) {
+        max-width: 450px;
+        height: auto;
+      }
       position: relative;
       overflow: hidden;
 
@@ -121,6 +139,7 @@
       line-height: 1.88;
 
       .title {
+        margin-bottom: 4px;
         font-weight: 700;
         font-size: 18px;
         line-height: 2;
