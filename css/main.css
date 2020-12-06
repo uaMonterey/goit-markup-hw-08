@@ -1039,6 +1039,12 @@ b {
   color: #2196f3;
 }
 
+@media screen and (max-width: 480px) {
+  .subscribe__input {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 1199px) {
   .subscribe__input {
     margin-left: auto;

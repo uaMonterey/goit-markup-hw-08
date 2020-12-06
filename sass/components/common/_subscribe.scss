@@ -26,6 +26,10 @@
   }
 
   &__input {
+    @media screen and (max-width: 480px) {
+      width: 100%;
+    }
+
     @media screen and (max-width: 1199px) {
       margin-left: auto;
       margin-right: auto;
