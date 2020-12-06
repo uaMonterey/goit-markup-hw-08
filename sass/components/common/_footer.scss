@@ -8,6 +8,15 @@
 
   background-color: $secondary-bgc;
 
+  .footer-box {
+    @include for-size(tablet) {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+  }
+
   .container {
     @include for-size(desktop) {
       display: flex;
@@ -19,6 +28,9 @@
     @media screen and (max-width: 767px) {
       margin-bottom: 60px;
       text-align: center;
+    }
+    @include for-size(desktop) {
+      text-align: start;
     }
   }
 
@@ -56,6 +68,8 @@
 }
 
 .social-network {
+  text-align: center;
+
   @media screen and (max-width: 767px) {
     text-align: center;
     margin-left: auto;
@@ -66,8 +80,6 @@
 
   padding-top: 12px;
   margin-left: 70px;
-  width: 206px;
-  height: 80px;
 
   .title {
     display: inline-block;

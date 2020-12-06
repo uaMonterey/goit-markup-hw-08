@@ -1,7 +1,9 @@
 .subscribe {
   margin-left: auto;
-  @media screen and (max-width: 767px) {
-    text-align: center;
+  text-align: center;
+
+  @include for-size(desktop) {
+    text-align: start;
   }
 
   .title {
@@ -24,7 +26,7 @@
   }
 
   &__input {
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1199px) {
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 20px;
@@ -51,7 +53,8 @@
 }
 
 .btn-send {
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1199px) {
+    display: flex;
     margin-left: auto;
     margin-right: auto;
   }
