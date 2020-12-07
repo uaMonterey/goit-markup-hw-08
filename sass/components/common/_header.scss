@@ -1,0 +1,131 @@
+.page-header {
+  position: relative;
+  &--border {
+    border-bottom: 1px solid rgb(236, 236, 236);
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and(max-width:480px) {
+      max-width: 480px;
+      height: 60px;
+    }
+
+    @media screen and(min-width:768px) {
+      max-width: 1600;
+      height: 80px;
+    }
+  }
+}
+
+.menu-button {
+  display: inline-flex;
+  display: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  transition: 250ms $timing-function;
+
+  @include for-size(mobile-only) {
+    display: block;
+  }
+
+  .icon-cross {
+    display: none;
+  }
+
+  &.is-open .icon-cross {
+    display: block;
+  }
+
+  &.is-open .icon-menu {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    fill: $accentColor;
+    // outline-color: yellowgreen;
+  }
+}
+
+.menu-container {
+  position: absolute;
+
+  top: 102%;
+  left: 0;
+  width: 100%;
+
+  width: 50px;
+  height: 50px;
+
+  @include for-size(mobile-only) {
+    width: 100%;
+    height: 393px;
+    z-index: 5;
+  }
+
+  display: none;
+
+  &.is-open {
+    display: block;
+    width: 100%;
+    background-color: $whiteColor;
+  }
+}
+
+// .nav {
+//   margin-left: 93px;
+
+//   &__list {
+//     display: flex;
+//   }
+
+//   &__item:not(:last-child) {
+//     margin-right: 50px;
+//   }
+
+//   &__link {
+//     display: inline-block;
+//     position: relative;
+
+//     padding-top: 32px;
+//     padding-bottom: 32px;
+
+//     font-weight: 500;
+//     font-size: 14px;
+//     line-height: 1.14;
+//     letter-spacing: 0.02em;
+
+//     color: $secondaryTextColor;
+
+//     transition: color 250ms $timing-function;
+
+//     &:hover,
+//     &:focus {
+//       color: $accentColor;
+//     }
+//   }
+// }
+
+// .link.current {
+//   color: $accentColor;
+
+//   &::after {
+//     position: absolute;
+//     left: 0;
+//     bottom: 0;
+
+//     display: block;
+//     content: "";
+//     width: 100%;
+//     height: 5px;
+
+//     border-radius: 4px;
+//     background-color: $accentColor;
+//   }
+// }
