@@ -71,19 +71,28 @@
   }
 
   @media screen and (min-width: 768px) {
-    @include centeredFlex();
     flex-grow: 1;
     margin-left: 88px;
     font-size: 14px;
     line-height: 1.14;
   }
 
-  @media screen and (min-width: 1199px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-left: auto;
   }
 
   .nav {
     &__list {
+      @extend .list;
       text-align: center;
 
       @media screen and (min-width: 768px) {
@@ -101,6 +110,7 @@
     }
 
     &__link {
+      @extend .link;
       display: inline-block;
       position: relative;
 
