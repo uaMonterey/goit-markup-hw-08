@@ -772,6 +772,7 @@ b {
   left: 0;
   width: 100%;
   height: 100%;
+  padding: 94px 15px;
   background: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -793,13 +794,24 @@ b {
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  width: 528px;
-  height: 581px;
+  width: 100%;
   transform: scale(1) translate(-50%, -50%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   /* .form-input:focus {
   outline-color: var(--accent);
 } */
+}
+
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .modal {
+    width: 450px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
 }
 
 .modal__btn {
@@ -831,7 +843,6 @@ b {
 
 .modal__title {
   display: inherit;
-  width: 448px;
   margin: 40px 40px 12px 40px;
   font-weight: bold;
   font-size: 20px;
@@ -941,6 +952,12 @@ b {
   color: #757575;
 }
 
+@media screen and (max-width: 1199px) {
+  .modal .policy {
+    font-size: 12px;
+  }
+}
+
 .modal .policy a {
   /* text-decoration: none; */
   color: #2196f3;
@@ -967,12 +984,6 @@ b {
 .modal .btn-send-form.button:focus,
 .modal .btn-send-form.button:hover {
   background-color: greenyellow;
-}
-
-@media (min-width: 1200px) {
-  .modal {
-    display: none;
-  }
 }
 
 .button {
@@ -1502,9 +1513,15 @@ b {
   color: #2196f3;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 479px) {
   .subscribe__input {
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .subscribe__input {
+    width: 450px;
   }
 }
 
@@ -1513,6 +1530,12 @@ b {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe__input {
+    width: 358px;
   }
 }
 

@@ -30,14 +30,21 @@
   }
 
   &__input {
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 479px) {
       width: 100%;
     }
 
+    @media screen and (min-width: 480px) and (max-width: 1199px) {
+      width: 450px;
+    }
     @media screen and (max-width: 1199px) {
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 358px;
     }
 
     display: block;
