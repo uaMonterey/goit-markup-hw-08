@@ -89,66 +89,94 @@
     justify-content: space-between;
     margin-left: auto;
   }
+}
 
-  .nav {
-    &__list {
-      @extend .list;
-      text-align: center;
+// navigation
 
-      @media screen and (min-width: 768px) {
-        display: flex;
-      }
-    }
+.nav {
+  @media screen and(max-width:767px) {
+    margin-bottom: 60px;
+  }
+  &__list {
+    @extend .list;
+    text-align: center;
 
     @media screen and (min-width: 768px) {
-      &__item:not(:last-child) {
-        margin-right: 50px;
-      }
+      display: flex;
     }
-    @media screen and (min-width: 1199px) {
-      margin-left: 93px;
-    }
+  }
 
-    &__link {
-      @extend .link;
+  @media screen and (max-width: 767px) {
+    &__item:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &__item:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+  @media screen and (min-width: 1199px) {
+    margin-left: 93px;
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    color: $secondaryTextColor;
+
+    transition: color 250ms $timing-function;
+
+    @media screen and (max-width: 767px) {
       display: inline-block;
-      position: relative;
+      font-size: 18px;
+      line-height: 1.16;
+      padding: 8px 0;
+    }
+    @extend .link;
+    display: inline-block;
+    position: relative;
 
+    @media screen and (min-width: 768px) {
       padding-top: 32px;
       padding-bottom: 32px;
       height: 80px;
-
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 1.14;
-      letter-spacing: 0.02em;
-
-      color: $secondaryTextColor;
-
-      transition: color 250ms $timing-function;
-
-      &:hover,
-      &:focus {
-        color: $accentColor;
-      }
     }
 
-    .link.current {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    color: $secondaryTextColor;
+
+    transition: color 250ms $timing-function;
+
+    &:hover,
+    &:focus {
       color: $accentColor;
+    }
+  }
 
-      &::after {
-        position: absolute;
-        left: 0;
-        bottom: 0;
+  .link.current {
+    color: $accentColor;
 
-        display: block;
-        content: "";
-        width: 100%;
-        height: 5px;
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: 0;
 
-        border-radius: 4px;
-        background-color: $accentColor;
-      }
+      display: block;
+      content: "";
+      width: 100%;
+      height: 5px;
+
+      border-radius: 4px;
+      background-color: $accentColor;
     }
   }
 }
