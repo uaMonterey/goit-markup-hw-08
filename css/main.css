@@ -322,6 +322,10 @@ html {
   box-sizing: inherit;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -775,6 +779,7 @@ b {
   padding: 94px 15px;
   background: rgba(0, 0, 0, 0.2);
   opacity: 1;
+  overflow-y: scroll;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 

@@ -8,6 +8,10 @@ html {
   box-sizing: inherit;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 body {
   margin: 0;
 
